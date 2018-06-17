@@ -1,4 +1,4 @@
-# connect-four
+# Connect Four
 Connect Four game with GUI for two players. Written using Java.
 
 ## Introduction
