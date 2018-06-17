@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connect_4.gui.Controller">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="restartGame" mnemonicParsing="false" onAction="#restartHandler" text="Restart">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnSaveGame" mnemonicParsing="false" onAction="#savedPressed" text="Save Game" />
+         </children>
+         <padding>
+            <Insets left="10.0" top="30.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <GridPane fx:id="grid" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#gridClicked" prefHeight="390.0" prefWidth="455.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="65.0" prefWidth="65.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </center>
+   <bottom>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="174.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
